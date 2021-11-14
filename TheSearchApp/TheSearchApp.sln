@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheSearchApp", "TheSearchApp\TheSearchApp.csproj", "{6BD224BE-F1BC-49BB-B015-E047568B7ADB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheSearchApp.DataManager", "TheSearchApp.DataManager\TheSearchApp.DataManager.csproj", "{822E0E0A-6EB1-4DF9-A510-058EBFCFF399}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BD224BE-F1BC-49BB-B015-E047568B7ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BD224BE-F1BC-49BB-B015-E047568B7ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BD224BE-F1BC-49BB-B015-E047568B7ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BD224BE-F1BC-49BB-B015-E047568B7ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{822E0E0A-6EB1-4DF9-A510-058EBFCFF399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{822E0E0A-6EB1-4DF9-A510-058EBFCFF399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{822E0E0A-6EB1-4DF9-A510-058EBFCFF399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{822E0E0A-6EB1-4DF9-A510-058EBFCFF399}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CFD150CD-FD90-4C65-8581-D598FC464485}
+	EndGlobalSection
+EndGlobal
