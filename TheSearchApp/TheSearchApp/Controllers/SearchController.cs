@@ -165,6 +165,5 @@ namespace TheSearchApp.Controllers
 
             return Ok(responseStr);
         }
-
     }
 }

@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [TheSearchApp]    Script Date: 14-Nov-21 19:25:39 ******/
+/****** Object:  Database [TheSearchApp]    Script Date: 15-Nov-21 11:55:12 ******/
 CREATE DATABASE [TheSearchApp]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -43,7 +43,7 @@ ALTER DATABASE [TheSearchApp] SET QUOTED_IDENTIFIER OFF
 GO
 ALTER DATABASE [TheSearchApp] SET RECURSIVE_TRIGGERS OFF 
 GO
-ALTER DATABASE [TheSearchApp] SET  DISABLE_BROKER 
+ALTER DATABASE [TheSearchApp] SET  ENABLE_BROKER 
 GO
 ALTER DATABASE [TheSearchApp] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
 GO
@@ -55,7 +55,7 @@ ALTER DATABASE [TheSearchApp] SET ALLOW_SNAPSHOT_ISOLATION OFF
 GO
 ALTER DATABASE [TheSearchApp] SET PARAMETERIZATION SIMPLE 
 GO
-ALTER DATABASE [TheSearchApp] SET READ_COMMITTED_SNAPSHOT OFF 
+ALTER DATABASE [TheSearchApp] SET READ_COMMITTED_SNAPSHOT ON 
 GO
 ALTER DATABASE [TheSearchApp] SET HONOR_BROKER_PRIORITY OFF 
 GO
@@ -79,19 +79,33 @@ ALTER DATABASE [TheSearchApp] SET QUERY_STORE = OFF
 GO
 USE [TheSearchApp]
 GO
-/****** Object:  Table [dbo].[SearchHistory]    Script Date: 14-Nov-21 19:25:40 ******/
+/****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 15-Nov-21 11:55:13 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[__EFMigrationsHistory](
+	[MigrationId] [nvarchar](150) NOT NULL,
+	[ProductVersion] [nvarchar](32) NOT NULL,
+ CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY CLUSTERED 
+(
+	[MigrationId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[SearchHistory]    Script Date: 15-Nov-21 11:55:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[SearchHistory](
 	[SearchId] [bigint] IDENTITY(1,1) NOT NULL,
-	[UserId] [varchar](50) NULL,
-	[SearchCategory] [varchar](50) NULL,
-	[SearchCriteria] [varchar](1000) NULL,
-	[APIRequest] [varchar](max) NULL,
-	[APIResponse] [varchar](max) NULL,
-	[RequestDate] [datetime] NULL,
+	[UserId] [nvarchar](50) NOT NULL,
+	[SearchCategory] [nvarchar](50) NULL,
+	[SearchCriteria] [nvarchar](500) NULL,
+	[APIRequest] [nvarchar](max) NULL,
+	[APIResponse] [nvarchar](max) NULL,
+	[RequestDate] [datetime2](7) NULL,
  CONSTRAINT [PK_SearchHistory] PRIMARY KEY CLUSTERED 
 (
 	[SearchId] ASC
